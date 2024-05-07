@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="range">
+            <div class="sliderValue">
+                <span>0</span>
+            </div>
+            <div class="field">
+                <input type="range" min="0" max="100" value="0" step="1">
+            </div>
+        </div>
+        <script>
+            let slideValue = document.querySelector("span");
+            let inputSlider = document.querySelector("input");
+            inputSlider.oninput = (() => {
+                let value = inputSlider.value;
+                slideValue.textContent = value;
+            });
+        </script>
+    </body>
+</html>
